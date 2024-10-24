@@ -14,10 +14,10 @@ export default function Navbar() {
   const isDarkMode = theme === "dark"; // Check if the current theme is dark
 
   return (
-    <nav
-      className="sticky top-0 z-40 w-full border-b border-b-slate-200 bg-white dark:border-b-slate-700"
+    <div
+      className="w-full border-b border-b-slate-200 bg-white dark:border-b-slate-700"
       style={{
-        backgroundColor: "var(--background)",
+        backgroundColor: "var(--secondary-bg)",
         color: "var(--foreground)",
       }}
     >
@@ -31,7 +31,7 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-4">
                 <Input
                   type="search"
                   placeholder="Search..."
@@ -64,7 +64,7 @@ export default function Navbar() {
                     </>
                   )}
                 </Toggle>
-              </nav>
+              </div>
             </SheetContent>
           </Sheet>
           <Button
@@ -130,6 +130,6 @@ export default function Navbar() {
           />
         </div>
       )}
-    </nav>
+    </div>
   );
 }
